@@ -1,0 +1,67 @@
+// * import index file
+@use '../tools' as *;
+// ==============================
+
+.blogs-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(10);
+    background-color: $color-dark-10;
+    border-radius: fluid(16, 10);
+    padding: fluid(20, 10);
+    position: relative;
+    transition: box-shadow 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0 0 rem(8) $color-dark-15;
+        }
+    }
+
+    @media (any-hover: none) {
+        &:active {
+            box-shadow: 0 0 rem(8) $color-dark-15;
+        }
+    }
+
+    &__image {
+        border-radius: fluid(16, 10);
+        width: fluid(473, 270);
+    }
+
+    &__title {
+        flex-grow: 1;
+        font-weight: 500;
+        font-size: fluid(24, 18);
+        color: $color-orange-95;
+        padding: fluid(20, 3) rem(0) rem(0) rem(0);
+
+        a {
+            color: inherit;
+            transition: color 0.3s ease 0s;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $color-orange-80;
+                }
+            }
+
+            @media (any-hover: none) {
+                &:active {
+                    color: $color-orange-80;
+                }
+            }
+        }
+    }
+
+    &__text {
+        position: relative;
+    }
+}

@@ -1,0 +1,22 @@
+// * import index file
+@use '../tools' as *;
+// =============================================================
+
+.back-color {
+    @include square(fluid(65, 52));
+    @include flex-center;
+
+    background-color: $color-dark-12;
+    border: rem(1.5) solid $color-dark-20;
+    border-radius: fluid(12, 8);
+
+    &_small {
+        @include square(fluid(52, 45));
+    }
+
+    &_circle {
+        display: block;
+        border-radius: 50%;
+        position: relative;
+    }
+}

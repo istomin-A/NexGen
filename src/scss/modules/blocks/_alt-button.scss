@@ -1,0 +1,79 @@
+// * import index file
+@use '../tools' as *;
+// ==============================================================
+
+.alt-button {
+    @include square(rem(52));
+
+    display: inline-block;
+    position: relative;
+    background-color: $color-dark-12;
+    border-radius: 50%;
+    border: rem(1.5) solid $color-dark-20;
+    transition: background-color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $color-dark-10;
+
+            svg {
+                fill: $color-orange-65;
+            }
+        }
+    }
+
+    @media (any-hover: none) {
+        &:active {
+            background-color: $color-dark-10;
+
+            svg {
+                fill: $color-orange-65;
+            }
+        }
+    }
+
+    @media (max-width: $laptop) {
+        @include square(rem(40));
+    }
+
+    svg {
+        @include square(rem(24));
+        @include abs-center;
+
+        fill: $color-orange-80;
+        pointer-events: none;
+        transition: fill 0.3s ease 0s;
+
+        @media (max-width: $laptop) {
+            @include square(rem(20));
+        }
+    }
+
+    &_none {
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    &_small {
+        @include square(rem(46));
+
+        @media (max-width: $laptop) {
+            display: none;
+        }
+
+        svg {
+            @include square(rem(20));
+        }
+    }
+
+    &_white {
+        background-color: $color-white;
+        pointer-events: none;
+
+        svg {
+            fill: $color-dark-06;
+        }
+    }
+}

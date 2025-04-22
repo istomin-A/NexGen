@@ -1,0 +1,43 @@
+// * import index file
+@use '../tools' as *;
+// ======================================
+
+.achievements-article {
+    display: flex;
+    flex-direction: column;
+    border-radius: fluid(16, 12);
+    background-color: $color-dark-10;
+
+    &_height{
+        height: 100%;
+    }
+
+    &__time {
+        display: block;
+        padding: fluid(16, 10) fluid(30, 10);
+        color: $color-grey-50;
+        font-family: $font-accent;
+        font-size: fluid(20, 14);
+    }
+
+    &__title {
+        padding: fluid(30, 10);
+        background-color: $color-dark-12;
+        font-weight: 500;
+        font-size: fluid(24, 18);
+        color: $color-orange-95;
+    }
+
+    &__text {
+        flex-grow: 1;
+        padding: fluid(30, 10);
+    }
+
+    &__more{
+        display: flex;
+        align-items: center;
+        gap: rem(5);
+        color: $color-grey-70;
+        padding: fluid(20, 10);
+    }
+}

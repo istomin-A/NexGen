@@ -1,0 +1,46 @@
+// * import index file
+@use '../tools' as *;
+// ==================================================================
+
+.ticker {
+    width: 100%;
+    background-color: $color-dark-10;
+    border-radius: fluid(12, 8);
+    overflow: hidden;
+
+    &_back-color-black {
+        background-color: $color-dark-06;
+    }
+
+    &__text {
+        display: inline-flex;
+        align-items: center;
+        gap: rem(20);
+        font-family: $font-accent;
+        color: $color-grey-40;
+        font-size: fluid(20, 14);
+        padding: fluid(20, 14) rem(0);
+        white-space: nowrap;
+        padding-left: 100%;
+        animation: scroll-left 25s linear infinite;
+
+        span {
+            @include square(rem(7));
+
+            flex-shrink: 0;
+            display: inline-block;
+            background-color: $color-orange-60;
+            border-radius: 50%;
+        }
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

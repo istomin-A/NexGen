@@ -1,0 +1,34 @@
+// * import index file
+@use '../tools' as *;
+// ====================================
+
+.team-article {
+    display: grid;
+    justify-items: center;
+    gap: rem(10);
+    padding: fluid(30, 10);
+    background: linear-gradient(to bottom, $color-dark-15 50%, $color-dark-10 50%);
+    border-radius: fluid(16, 12);
+
+    &__header {
+        margin: rem(0) rem(0) fluid(20, 3) rem(0);
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: fluid(24, 18);
+        color: $color-orange-95;
+    }
+
+    &__proff {}
+
+    &__image-box {
+        margin: rem(0) rem(0) fluid(20, 3) rem(0);
+    }
+
+    &__image {
+        width: fluid(320, 240);
+        border-radius: fluid(12, 8);
+    }
+}

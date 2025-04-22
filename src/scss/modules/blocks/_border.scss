@@ -1,0 +1,13 @@
+// * import index file
+@use '../tools' as *;
+// =================================================
+
+.border {
+    border: rem(2) solid $color-dark-12;
+    border-radius: fluid(24, 16);
+    padding: rem(20);
+
+    @media (max-width: $laptop) {
+        padding: rem(10);
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title": "NexGen | Projects"
+})
+
+<body>
+    @@include('html/header.html',{
+        "page": "projects"
+    })
+    <main class="main">
+        @@include('html/intro.html',{
+        "titleFirstPart": "Empowering Your",
+        "titleSecondPart": "Digital Vision",
+        "text": "At NexGen, we are committed to empowering your digital vision with innovative solutions tailored to your unique needs. Our team of skilled professionals, coupled with cutting-edge technologies, ensures that we deliver exceptional results that elevate your online presence.",
+        "hideTicker": true,
+        "hideIntroMedia": true,
+        "imageIntro": "@img/projects/intro.jpg",
+        "titleLinkImage": "View Blog",
+        "subTitleLinkImage": "Web Development.",
+        "hideAdvantages": false
+        })
+        @@include('html/advantages.html',{
+            "sectionTitle": "Key Features of Our Projects",
+            "articleTitleOne": "Strategic Planning",
+            "articleTextOne": "Every project begins with thorough research and strategic planning to ensure a holistic understanding of our clients' objectives.",
+            "articleTitleTwo": "Customized Solutions",
+            "articleTextTwo": "We believe in tailoring our services to suit each project's unique requirements, resulting in solutions.",
+            "articleTitleThree": "User-Centric Approach",
+            "articleTextThree": "Our projects are designed with the end-user in mind, prioritizing seamless user experiences and intuitive interfaces.",
+            "articleTitleFour": "Timely Delivery",
+            "articleTextFour": "We adhere to strict timelines and project schedules to ensure timely delivery without compromising on quality.",
+            "isArticleTitleLink": false,
+            "hideButton": false
+        })
+        @@include('html/works.html',{
+            "sectionTitle": "Projects Showcase"
+        })
+        @@include('html/reviews.html',{})
+        @@include('html/questions.html',{})
+    </main>
+    @@include('html/footer.html',{})
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

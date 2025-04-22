@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title": "NexGen | Services"
+})
+
+<body>
+    @@include('html/header.html',{
+        "page": 'services'
+    })
+    <main class="main">
+        @@include('html/intro.html',{
+            "titleFirstPart": "Our Comprehensive",
+            "titleSecondPart": "Digital Solutions",
+            "text": "At NexGen, we offer a comprehensive suite of digital solutions designed to propel your business to new heights in the digital realm. With a team of skilled professionals, cutting-edge technologies, and a passion for innovation",
+            "hideTicker": true,
+            "hideIntroMedia": true,
+            "imageIntro": "@img/works/marketing.jpg",
+            "titleLinkImage": "View Blog",
+            "subTitleLinkImage": "Web Development.",
+            "hideAdvantages": false
+        })
+        @@include('html/services.html',{
+            "servicesAlt": true,
+            "hideLinkAllServices": false
+        })
+        @@include('html/success.html',{})
+        @@include('html/reviews.html',{})
+        @@include('html/questions.html',{})
+    </main>
+    @@include('html/footer.html',{})
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<section class="advantages">
+    <div class="_container">
+        <div class="border">
+            <div class="section-header">
+                <h2 class="section-header__title">
+                    @@sectionTitle
+                </h2>
+            </div>
+            <div class="advantages__body">
+                <article class="alt-article">
+                    <h3 class="alt-article__title">
+                        @@if (isArticleTitleLink){
+                            <a href="#">
+                                @@articleTitleOne
+                            </a>
+                        }
+                        @@if (!isArticleTitleLink){
+                            @@articleTitleOne
+                        }
+                    </h3>
+                    <p class="alt-article__text">
+                        @@articleTextOne
+                    </p>
+                    @@if (hideButton) {
+                        <a href="#" class="alt-article__inner">
+                            <div class="alt-button">
+                                <svg>
+                                    <use xlink:href="@img/sprite/sprite.svg#arrow-top-right"></use>
+                                </svg>
+                            </div>
+                            <p>Learn More</p>
+                        </a>
+                    }
+                </article>
+                <article class="alt-article">
+                    <h3 class="alt-article__title">
+                        @@if (isArticleTitleLink){
+                            <a href="#">
+                                @@articleTitleTwo
+                            </a>
+                        }
+                        @@if (!isArticleTitleLink){
+                            @@articleTitleTwo
+                        }
+                    </h3>
+                    <p class="alt-article__text">
+                        @@articleTextTwo
+                    </p>
+                    @@if (hideButton) {
+                        <a href="#" class="alt-article__inner">
+                            <div class="alt-button">
+                                <svg>
+                                    <use xlink:href="@img/sprite/sprite.svg#arrow-top-right"></use>
+                                </svg>
+                            </div>
+                            <p>Learn More</p>
+                        </a>
+                    }
+                </article>
+                <article class="alt-article">
+                    <h3 class="alt-article__title">
+                        @@if (isArticleTitleLink){
+                            <a href="#">
+                                @@articleTitleThree
+                            </a>
+                        }
+                        @@if (!isArticleTitleLink){
+                            @@articleTitleThree
+                        }
+                    </h3>
+                    <p class="alt-article__text">
+                        @@articleTextThree
+                    </p>
+                    @@if (hideButton) {
+                        <a href="#" class="alt-article__inner">
+                            <div class="alt-button">
+                                <svg>
+                                    <use xlink:href="@img/sprite/sprite.svg#arrow-top-right"></use>
+                                </svg>
+                            </div>
+                            <p>Learn More</p>
+                        </a>
+                    }
+                </article>
+                <article class="alt-article">
+                    <h3 class="alt-article__title">
+                        @@if (isArticleTitleLink){
+                            <a href="#">
+                                @@articleTitleFour
+                            </a>
+                        }
+                        @@if (!isArticleTitleLink){
+                            @@articleTitleFour
+                        }
+                    </h3>
+                    <p class="alt-article__text">
+                        @@articleTextFour
+                    </p>
+                    @@if (hideButton) {
+                        <a href="#" class="alt-article__inner">
+                            <div class="alt-button">
+                                <svg>
+                                    <use xlink:href="@img/sprite/sprite.svg#arrow-top-right"></use>
+                                </svg>
+                            </div>
+                            <p>Learn More</p>
+                        </a>
+                    }
+                </article>
+            </div>
+        </div>
+    </div>
+</section>

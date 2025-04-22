@@ -1,0 +1,215 @@
+// * import index file
+@use 'tools' as *;
+
+// =======================================================================================================
+// * Базовые стили для modal`s
+// .modal {
+//     position: fixed;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     margin: 0;
+
+//     display: block;
+//     opacity: 0;
+//     visibility: hidden;
+//     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .7);
+//     transition: opacity .5s ease 0s, visibility .5s ease 0s, box-shadow .5s ease 0s;
+// }
+
+// .modal[open] {
+//     opacity: 1;
+//     visibility: visible;
+// }
+
+// .modal::backdrop {
+//     background-color: #00000000;
+// }
+
+// =======================================================================================================
+// * Базовые стили для checkbox`ов
+// ._checkbox-real {
+//     width: 0;
+//     height: 0;
+//     opacity: 0;
+//     position: absolute;
+//     z-index: -1;
+
+//     &:checked+._checkbox-custom::before {
+//         transform: translate(-50%, -50%) scale(1);
+//     }
+
+//     &:focus+._checkbox-custom {
+//         box-shadow: 0px 0px 0px rem(1) #2F2F51, 0px 0px rem(10) #2F2F51;
+//     }
+// }
+
+// ._checkbox-custom {
+//     display: inline-block;
+//     width: rem(20);
+//     height: rem(20);
+//     border: rem(2) solid #E6E7E8;
+//     border-radius: rem(3);
+//     position: relative;
+
+//     &::before {
+//         content: '';
+//         display: inline-block;
+//         width: rem(12);
+//         height: rem(12);
+//         background-color: rgba(14, 20, 34, .5);
+//         border-radius: rem(3);
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%) scale(0);
+//         transition: transform 0.3s ease 0s;
+//     }
+// }
+
+// =======================================================================================================
+// * Базовые стили для radio-buttons
+// ._radio-real {
+//     width: 0;
+//     height: 0;
+//     position: absolute;
+//     opacity: 0;
+//     z-index: -1;
+
+//     &:checked+._radio-custom::before {
+//         transform: translate(-50%, -50%) scale(1);
+//     }
+
+//     &:focus+._radio-custom {
+//         box-shadow: 0px 0px 0px rem(1) #000, 0px 0px rem(10) #000;
+//     }
+// }
+
+// ._radio-custom {
+//     display: inline-block;
+//     width: rem(24);
+//     height: rem(24);
+//     background-color: #A3BEF8;
+//     border-radius: 50%;
+//     position: relative;
+
+//     &::before {
+//         content: '';
+//         display: inline-block;
+//         width: rem(32);
+//         height: rem(32);
+//         border: rem(2) solid #0E1422;
+//         border-radius: 50%;
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%) scale(0);
+//         transition: transform 0.5s ease 0s;
+//     }
+// }
+
+// =======================================================================================================
+// *custom select
+// .select {
+//     position: relative;
+
+//     &__button {
+//         display: block;
+//         width: 100%;
+//         text-align: left;
+//         border: rem(1) solid #000;
+//         border-radius: rem(5);
+//         background: #fff;
+//         padding: rem(12) rem(50) rem(12) rem(20);
+//         font-weight: 500;
+//         font-size: rem(16);
+//         line-height: part(20, 16);
+
+//         &._active {
+//             outline: rem(1) solid #000;
+//         }
+//     }
+
+//     &__inner {
+//         position: relative;
+//     }
+
+//     &__icon {
+//         display: inline-block;
+//         width: rem(20);
+//         height: rem(20);
+//         position: absolute;
+//         top: 50%;
+//         right: rem(15);
+//         transform: translateY(-50%);
+//         transition: transform 0.5s ease 0s;
+//         pointer-events: none;
+
+//         &._active {
+//             transform: translateY(-50%) rotate(-180deg);
+//         }
+//     }
+
+//     &__list {
+//         position: absolute;
+//         top: rem(45);
+//         left: 0;
+//         z-index: 1;
+//         background: #fff;
+//         box-shadow: 0px rem(4) rem(8) rgba(176, 198, 225, .5);
+//         overflow: hidden;
+//         border-radius: rem(5);
+//         width: 100%;
+//         font-weight: 500;
+//         font-size: rem(16);
+
+//         &._active {}
+//     }
+
+//     &__item {
+//         cursor: pointer;
+//         background: #fff;
+//         transition: background 0.5s ease 0s;
+//         // ========
+//         padding: 0;
+//         color: transparent;
+//         line-height: 0;
+//         overflow: hidden;
+//         transition: line-height .8s ease 0s, color .5s ease 0s, padding .8s ease 0s;
+//         // ======
+
+//         &_first {
+//             border-radius: rem(5) rem(5) 0 0;
+//         }
+
+//         &_last {
+//             border-radius: 0 0 rem(5) rem(5);
+//         }
+
+//         @media (any-hover: hover) {
+//             &:hover {
+//                 background: rgba(176, 198, 225, .25);
+//             }
+//         }
+
+//         &._active {
+//             border: rem(2) solid #7E9BBD;
+//             border-bottom: 0;
+//             line-height: part(20, 16);
+//             padding: rem(12) rem(20);
+//             color: #000;
+//         }
+
+//         &_last._active {
+//             border-bottom: rem(2) solid #7E9BBD;
+//         }
+//     }
+
+//     &__input {
+//         display: none;
+//     }
+// }
+
+// ._focus-visible {
+//     background: rgba(176, 198, 225, .25);
+// }

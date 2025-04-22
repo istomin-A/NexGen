@@ -1,0 +1,389 @@
+// * import index file
+@use '../tools' as *;
+// =======================================================================================================
+
+.footer {
+
+    &__promo {
+        padding: rem(20) rem(0) rem(20) rem(0);
+
+        @media (max-width: $laptop) {
+            padding: rem(10) rem(0) rem(10) rem(0);
+        }
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: rem(30);
+        padding: fluid(70, 18);
+        background-color: $color-orange-60;
+        border-radius: fluid(20, 14);
+
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+            gap: rem(17);
+        }
+    }
+
+    &__ticker {
+        padding: rem(0) rem(0) rem(20) rem(0);
+
+        @media (max-width: $laptop) {
+            padding: rem(0) rem(0) rem(10) rem(0);
+        }
+    }
+
+    &__body {
+        padding: rem(0) rem(0) fluid(50, 20) rem(0);
+    }
+
+    &__alt-title {
+        font-weight: 500;
+        font-size: fluid(52, 22);
+        color: $color-dark-06;
+
+        &:not(:last-child) {
+            margin: rem(0) rem(0) rem(5) rem(0);
+        }
+    }
+
+    &__alt-text {
+        color: $color-dark-15;
+    }
+
+    &__button {
+
+        @media (min-width: $tablet) {
+            justify-self: end;
+            align-self: end;
+        }
+
+        @media (max-width: $tablet) {
+            justify-self: start;
+        }
+
+        @media (max-width: $mobile) {
+            justify-self: stretch;
+        }
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: 1.2fr 1.8fr;
+        gap: rem(20);
+
+        @media (max-width: $laptop) {
+            gap: rem(10);
+        }
+
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.social-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(20);
+
+    @media (max-width: $laptop) {
+        gap: rem(10);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: rem(30);
+        min-height: rem(310);
+        background-color: $color-dark-10;
+        border-radius: rem(14);
+        position: relative;
+        transition: box-shadow 0.2s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: 0 0 rem(8) $color-dark-15;
+            }
+        }
+
+        @media (any-hover: none) {
+            &:active {
+                box-shadow: 0 0 rem(8) $color-dark-15;
+            }
+        }
+
+        @media (max-width: $laptop) {
+            padding: rem(15);
+            min-height: rem(240);
+            border-radius: rem(10);
+        }
+
+        @media (max-width: $tablet) {
+            min-height: 0;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(15);
+
+        @media (max-width: $tablet) {
+            justify-content: center;
+        }
+    }
+
+    &__content {
+        margin: auto rem(0) rem(0) rem(0);
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    &__back-color {
+        flex-shrink: 0;
+
+        @media (max-width: $tablet) {
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+            }
+        }
+
+        img {
+
+            @media (max-width: $laptop) {
+                @include square(rem(28));
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        font-weight: 500;
+        font-size: rem(30);
+        text-transform: uppercase;
+        color: $color-orange-95;
+        transition: color 0.3s ease 0s;
+
+        &:not(:last-child) {
+            margin: rem(0) rem(0) rem(12) rem(0);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-orange-80;
+            }
+        }
+
+        @media (any-hover: none) {
+            &:active {
+                color: $color-orange-80;
+            }
+        }
+
+        @media (max-width: $laptop) {
+            font-size: rem(22);
+        }
+    }
+
+    &__text {}
+}
+
+.main-footer {
+    display: grid;
+    gap: rem(20);
+
+    @media (max-width: $laptop) {
+        gap: rem(10);
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: rem(10);
+        padding: fluid(54, 20);
+        background-color: $color-dark-10;
+        border-radius: fluid(20, 14);
+
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(20);
+        }
+    }
+
+    &__element {
+
+        &_soon {
+            display: inline-flex;
+            gap: rem(8);
+
+            &::after {
+                content: 'Soon';
+                font-family: $font-accent;
+                color: $color-grey-80;
+                font-size: fluid(16, 14);
+                background-color: $color-dark-15;
+                padding: rem(4) rem(10);
+                border-radius: rem(5);
+                border: rem(1.5) solid $color-dark-20;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: fluid(20, 16);
+    }
+
+    &__title {
+        font-family: $font-accent;
+        font-weight: 600;
+        font-size: rem(22);
+        color: $color-orange-90;
+
+        @media (max-width: $mobile) {
+            font-size: rem(18);
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
+    }
+
+    &__link {
+        color: $color-grey-50;
+        transition: color 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-dark-25;
+            }
+        }
+
+        @media (any-hover: none) {
+            &:active {
+                color: $color-dark-25;
+            }
+        }
+    }
+
+    &__subscribe {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(15);
+        background-color: $color-dark-10;
+        border-radius: fluid(20, 14);
+        padding: fluid(50, 20);
+
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: rem(5);
+    }
+
+    &__sup-newsletter {
+        font-size: fluid(18, 14);
+        color: $color-grey-40;
+        text-transform: uppercase;
+    }
+
+    &__newsletter {
+        color: $color-orange-95;
+        font-size: fluid(24, 16);
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__copyright {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(15);
+        background-color: $color-dark-10;
+        border-radius: fluid(20, 14);
+        padding: fluid(45, 20);
+
+        @media (max-width: $laptop) {
+            flex-direction: column;
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        gap: rem(22);
+
+        @media (max-width: $mobile) {
+            width: 100%;
+            flex-direction: column;
+            gap: rem(5);
+        }
+    }
+
+    &__text {
+        font-family: $font-accent;
+
+        &_link {
+            color: inherit;
+            transition: color 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $color-grey-50;
+                }
+            }
+
+            @media (any-hover: none) {
+                &:active {
+                    color: $color-grey-50;
+                }
+            }
+        }
+
+        &_line {
+            position: relative;
+
+            @media (max-width: $mobile) {
+                width: 100%;
+                text-align: center;
+            }
+
+            &::after {
+                content: '';
+                display: inline-block;
+                height: rem(1.5);
+                background-color: $color-grey-70;
+
+                @media (min-width: $mobile) {
+                    width: rem(25);
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(90deg);
+                }
+
+                @media (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

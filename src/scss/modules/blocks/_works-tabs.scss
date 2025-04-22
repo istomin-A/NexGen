@@ -1,0 +1,199 @@
+// * import index file
+@use '../tools' as *;
+// ===============================
+
+.works-tabs {
+
+    &_margin {
+
+        &:not(:last-child) {
+            margin: rem(0) rem(0) rem(20) rem(0);
+        }
+    }
+
+    &__header {
+        margin: rem(0) rem(0) fluid(30, 15) rem(0);
+
+        @media (max-width: $mobile) {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: rem(8);
+        justify-content: center;
+
+        @media (max-width: $mobile) {
+            width: max-content;
+            margin: 0 auto;
+        }
+    }
+
+    &__body {}
+
+    &__content {
+        display: grid;
+        gap: fluid(20, 10);
+
+        &:not(._active) {
+            display: none;
+        }
+
+        &_alt {
+            padding: fluid(30, 10);
+            background-color: $color-dark-10;
+            border-radius: fluid(16, 12)
+        }
+
+        &_contact {
+            padding: fluid(40, 15);
+            background-color: $color-dark-10;
+            border-radius: fluid(16, 12)
+        }
+    }
+
+    &__title {
+        @include visually-hidden;
+    }
+
+    &__sup-title {
+        font-family: $font-accent;
+        font-weight: 400;
+        font-size: fluid(48, 24);
+        color: $color-orange-95;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: fluid(20, 10);
+
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__image {
+        height: auto;
+
+        img {
+            @include square(100%);
+
+            object-fit: cover;
+            border-radius: fluid(16, 12);
+
+            @media (max-width: $mobile) {
+                height: rem(220);
+            }
+        }
+    }
+
+    &__info {
+        display: grid;
+        gap: rem(20);
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    &__technologies {
+        display: flex;
+        flex-direction: column;
+        gap: rem(10);
+        background-color: $color-dark-10;
+        border-radius: fluid(16, 12);
+        padding: fluid(30, 15);
+    }
+
+    &__sub-title {
+        font-weight: 500;
+        color: $color-orange-95;
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: rem(10);
+
+        p {
+            padding: fluid(10, 6) fluid(16, 10);
+            background-color: $color-dark-12;
+            border-radius: rem(45);
+            font-size: fluid(16, 14);
+        }
+    }
+
+    &__team {
+        display: flex;
+        align-items: center;
+        gap: fluid(20, 10);
+        background-color: $color-dark-10;
+        border-radius: fluid(16, 12);
+        padding: fluid(20, 15);
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: rem(5);
+
+        img {
+
+            @media (max-width: $laptop) {
+                @include square(rem(40));
+            }
+        }
+    }
+
+    &__btn {
+        text-align: center;
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: rem(20);
+
+        @media (max-width: $laptop) {
+            gap: rem(10);
+        }
+
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+
+    &__photo {
+        border-radius: fluid(16, 12);
+        width: fluid(480, 280);
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(20);
+
+        @media (max-width: $laptop) {
+            gap: rem(10);
+        }
+
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__copy {
+        display: grid;
+        gap: fluid(15, 10);
+    }
+}

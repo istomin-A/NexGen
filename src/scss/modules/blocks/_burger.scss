@@ -1,0 +1,75 @@
+// * import index file
+@use '../tools' as *;
+// ==================================================================================
+
+.burger {
+    display: none;
+
+    position: relative;
+    height: rem(18);
+    width: rem(30);
+    z-index: 20;
+    background-color: transparent;
+
+    &::before,
+    &::after,
+    span {
+        position: absolute;
+        z-index: 18;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: $color-white;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+    }
+
+    &::before {
+        left: 0;
+        top: 0;
+    }
+
+    &::after {
+        right: 0;
+        bottom: 0;
+        width: 50%;
+    }
+
+    span {
+        left: 0;
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    &._active {
+        span {
+            transform: scale(0) translate(0px, -50%);
+        }
+
+        &::before {
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -50%);
+        }
+
+        &::after {
+            bottom: 50%;
+            width: 100%;
+            transform: rotate(45deg) translate(0px, 50%);
+        }
+    }
+
+    &__back-color {
+        @include square(rem(44));
+        @include abs-center;
+
+        background-color: $color-dark-06;
+        border-radius: rem(10);
+    }
+
+    @media (max-width: $tablet) {
+        display: block;
+    }
+}

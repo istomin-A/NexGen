@@ -1,0 +1,27 @@
+<header class="header" data-js-header>
+    <div class="header__container _container">
+        <div class="header__body" data-js-header-body>
+            <a href="index.html" class="header__logo logo" aria-label="logo">
+                <img src="@img/logo/logo.svg" alt="logo" width="130" height="24">
+            </a>
+
+            <div class="menu">
+                <button class="burger" data-js-burger aria-label="Open menu" aria-expanded="false">
+                    <div class="burger__back-color"></div>
+                    <span></span>
+                </button>
+                <nav class="menu__body" data-js-menu-body>
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="index.html" class="menu__link @@if(page === 'home'){_active}" data-js-menu-link>Home</a></li>
+                        <li class="menu__item"><a href="services.html" class="menu__link @@if(page === 'services'){_active}" data-js-menu-link>Services</a></li>
+                        <li class="menu__item"><a href="projects.html" class="menu__link @@if(page === 'projects'){_active}" data-js-menu-link>Projects</a></li>
+                        <li class="menu__item"><a href="about.html" class="menu__link @@if(page === 'about'){_active}" data-js-menu-link>About</a></li>
+                        <li class="menu__item"><a href="careers.html" class="menu__link @@if(page === 'careers'){_active}" data-js-menu-link>Careers</a></li>
+                        <li class="menu__item"><a href="blogs.html" class="menu__link @@if(page === 'blogs'){_active}" data-js-menu-link>Blogs</a></li>
+                        <li class="menu__item"><a href="contact.html" class="button button_burger" data-js-menu-link>Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

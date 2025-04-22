@@ -1,0 +1,71 @@
+// * import index file
+@use '../tools' as *;
+// ================================
+
+.contact {
+    padding: fluid(40, 20) rem(0);
+
+    &__body {
+        @media (min-width: $tablet) {
+            display: grid;
+            grid-template-columns: 0.7fr 1fr;
+            gap: rem(20);
+        }
+
+        @media (max-width: $laptop) {
+            gap: rem(10);
+        }
+    }
+
+    &__title {
+        font-size: fluid(20, 16);
+    }
+
+    &__inner {
+        padding: rem(10) fluid(15, 10);
+        background-color: $color-dark-12;
+        border-radius: fluid(16, 12) fluid(100, 50) fluid(100, 50) fluid(16, 12);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(15);
+        position: relative;
+    }
+
+    &__info {
+        display: inline-block;
+        font-family: $font-accent;
+        color: $color-white;
+        font-size: fluid(18, 14);
+        text-transform: uppercase;
+        transition: color 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-orange-80;
+            }
+        }
+
+        @media (any-hover: none) {
+            &:active {
+                color: $color-orange-80;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+    }
+
+    &__link {
+        pointer-events: none;
+    }
+
+    &__form {
+        background-color: $color-dark-10;
+        padding: fluid(40, 15);
+        border-radius: fluid(16, 12);
+    }
+}

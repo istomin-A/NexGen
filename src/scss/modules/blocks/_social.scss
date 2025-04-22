@@ -1,0 +1,44 @@
+// * import index file
+@use '../tools' as *;
+// ====================================
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: rem(5);
+
+    &__item {
+        @include flex-center;
+
+        position: relative;
+
+        @media (any-hover: hover) {
+            &:hover .social__icon {
+                fill: $color-orange-65;
+            }
+        }
+
+        @media (any-hover: none) {
+            &:active .social__icon {
+                fill: $color-orange-65;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+    }
+
+    &__icon {
+        @include square(fluid(24, 20));
+
+        fill: $color-orange-80;
+        transition: fill 0.3s ease 0s;
+    }
+}

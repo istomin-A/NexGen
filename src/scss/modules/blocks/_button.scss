@@ -1,0 +1,104 @@
+// * import index file
+@use '../tools' as *;
+// =======================================================================================================
+
+.button {
+    display: inline-block;
+    white-space: nowrap;
+    padding: fluid(18, 14) rem(24);
+    border-radius: fluid(12, 8);
+    background-color: $color-orange-60;
+    font-family: $font-accent;
+    font-weight: 500;
+    font-size: rem(18);
+    text-align: center;
+    color: $color-dark-06;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $color-orange-65;
+        }
+    }
+
+    @media (any-hover: none) {
+        &:active {
+            background-color: $color-orange-65;
+        }
+    }
+
+    @media (max-width: $laptop) {
+        font-size: rem(14);
+    }
+
+    &_burger {
+        @media (max-width: $tablet) {
+            font-size: rem(18);
+        }
+    }
+
+    &_services {
+        text-align: center;
+
+        @media (min-width: $tablet) {
+            display: none;
+        }
+    }
+
+    &_alt {
+        display: inline-flex;
+        align-items: center;
+        gap: rem(10);
+        padding: rem(18) rem(35);
+        background-color: $color-dark-06;
+        color: $color-orange-90;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $color-dark-12;
+            }
+        }
+
+        @media (any-hover: none) {
+            &:active {
+                background-color: $color-dark-12;
+            }
+        }
+
+        @media (max-width: $laptop) {
+            padding: rem(14) rem(24);
+        }
+
+        @media (max-width: $mobile) {
+            justify-content: center;
+        }
+    }
+
+    &_tabs {
+        background-color: $color-dark-25;
+
+        &._active {
+            background-color: $color-orange-60;
+            pointer-events: none;
+        }
+    }
+
+    &_tabs-small{
+        padding: fluid(18, 14) fluid(24, 8);
+    }
+
+    &_relative{
+        position: relative;
+    }
+
+    &__icon-arrow {
+        @include square(rem(28));
+
+        fill: $color-orange-80;
+
+        @media (max-width: $laptop) {
+            @include square(rem(22));
+        }
+    }
+}

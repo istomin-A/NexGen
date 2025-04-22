@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title": "NexGen | Careers"
+})
+
+<body>
+    @@include('html/header.html',{
+        "page": 'careers'
+    })
+    <main class="main">
+        @@include('html/intro.html',{
+            "titleFirstPart": "Unlock Your Potential",
+            "titleSecondPart": "in the Digital World",
+            "text": "We believe in fostering a dynamic and collaborative work environment that empowers our team members to excel in their respective fields. Join us to be part of a passionate and innovative team dedicated to crafting exceptional digital solutions for clients across the globe. We are committed to nurturing talent, encouraging professional growth, and creating a workplace where creativity thrives.",
+            "hideTicker": true,
+            "hideIntroMedia": false,
+            "imageIntro": "@img/intro/estatein.png",
+            "titleLinkImage": "Estatein Real Estate",
+            "subTitleLinkImage": "Web Development.",
+            "hideAdvantages": false
+        })
+        @@include('html/join.html',{})
+        @@include('html/apply.html',{})
+        @@include('html/reviews.html',{})
+        @@include('html/questions.html',{})
+    </main>
+    @@include('html/footer.html',{})
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

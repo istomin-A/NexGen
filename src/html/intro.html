@@ -1,0 +1,117 @@
+<section class="intro">
+    <div class="intro__main _container">
+        <div class="intro__body">
+            <div class="intro__info">
+                <div class="intro__inner">
+                    <h1 class="intro__title">
+                        @@titleFirstPart <span class="intro__title-hidden-part">@@titleSecondPart</span>
+                    </h1>
+                    <a href="#" class="intro__button unique-button" aria-label="button Start a Project">
+                        <img class="unique-button__icon" src="@img/unique-button/button-icon.svg" alt="" width="77"
+                            height="77">
+                        Start a Project
+                    </a>
+                    <p class="intro__subtitle">@@titleSecondPart</p>
+                </div>
+                <p class="intro__text">
+                    @@text
+                </p>
+                @@if (hideTicker){
+                    <div class="intro__ticker ticker ticker_back-color-black">
+                        <p class="ticker__text">
+                            Digital Marketing <span></span>
+                            Website Design <span></span>
+                            Branding <span></span>
+                            Website Development <span></span>
+                            Mobile App Development <span></span>
+                            Digital Marketing
+                        </p>
+                    </div>
+                }
+            </div>
+            @@if(hideIntroMedia){
+                <div class="intro__media">
+                    <div class="intro__link-img">
+                        <img class="intro__img" src="@@imageIntro" alt="" width="490" height="384">
+                    </div>
+                    <div class="intro__box">
+                        <a href="#" class="intro__link-title">
+                            @@titleLinkImage
+                        </a>
+                        <p class="intro__description">@@subTitleLinkImage</p>
+                    </div>
+                </div>
+            }
+            @@if(!hideIntroMedia){
+                <div class="intro__stat">
+                    <div class="intro__item intro__item_stat">
+                        <p class="intro__title-statistics">Clients</p>
+                        <span class="intro__statistics">200+</span>
+                    </div>
+                    <div class="intro__item intro__item_stat">
+                        <p class="intro__title-statistics">PROJECTS</p>
+                        <span class="intro__statistics">280+</span>
+                    </div>
+                    <div class="intro__item intro__item_stat">
+                        <p class="intro__title-statistics">HAPPY CLIENTS</p>
+                        <span class="intro__statistics">100%</span>
+                    </div>
+                    <div class="intro__item intro__item_stat">
+                        <p class="intro__title-statistics">FOLLOWER</p>
+                        <span class="intro__statistics">420K</span>
+                    </div>
+                    <div class="intro__item intro__item_stat">
+                        <p class="intro__title-statistics">Years Of Experience</p>
+                        <span class="intro__statistics">10+</span>
+                    </div>
+                    <div class="intro__item intro__item_stat intro__item_more">
+                        <a href="#" class="intro__inner-statistics">
+                            <div class="alt-button">
+                                <svg>
+                                    <use xlink:href="@img/sprite/sprite.svg#arrow-top-right"></use>
+                                </svg>
+                            </div>
+                            <p>Know More</p>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    @@if (hideAdvantages) {
+        <div class="intro__advantages _container">
+            <div class="intro__wrapper border">
+                <div class="intro__item">
+                    <p class="intro__title-statistics">Clients</p>
+                    <span class="intro__statistics">200+</span>
+                </div>
+                <div class="intro__item">
+                    <p class="intro__title-statistics">PROJECTS</p>
+                    <span class="intro__statistics">280+</span>
+                </div>
+                <div class="intro__item">
+                    <p class="intro__title-statistics">HAPPY CLIENTS</p>
+                    <span class="intro__statistics">100%</span>
+                </div>
+                <div class="intro__item">
+                    <p class="intro__title-statistics">FOLLOWER</p>
+                    <span class="intro__statistics">420K</span>
+                </div>
+                <div class="intro__item">
+                    <p class="intro__title-statistics">Years Of Experience</p>
+                    <span class="intro__statistics">10+</span>
+                </div>
+                <div class="intro__item intro__item_more">
+                    <a href="#" class="intro__inner-statistics">
+                        <div class="alt-button">
+                            <svg>
+                                <use xlink:href="@img/sprite/sprite.svg#arrow-top-right"></use>
+                            </svg>
+                        </div>
+                        <p>Know More</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</section>

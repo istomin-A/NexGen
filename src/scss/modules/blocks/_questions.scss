@@ -1,0 +1,66 @@
+// * import index file
+@use '../tools' as *;
+// ======================================================================
+
+.questions {
+    padding: fluid(40, 20) rem(0);
+
+    &__body {
+        display: grid;
+        grid-template-columns: 1.6fr 1fr;
+        gap: rem(20);
+
+        @media (max-width: $laptop) {
+            gap: rem(10);
+        }
+
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__spollers {
+        display: grid;
+        gap: rem(20);
+
+        @media (max-width: $laptop) {
+            gap: rem(10);
+        }
+    }
+
+    &__form {
+        padding: fluid(30, 15);
+        background-color: $color-dark-10;
+        border-radius: fluid(16, 12);
+
+        @media (min-width: $tablet) {
+            align-self: start;
+        }
+
+        @media (max-width: $tablet) {
+            justify-self: center;
+            min-width: 50%;
+        }
+
+        @media (max-width: $mobile) {
+            justify-self: auto;
+            min-width: 100%;
+        }
+    }
+
+    &__form-title {
+        font-weight: 500;
+        font-size: fluid(24, 18);
+        margin: rem(0) rem(0) fluid(25, 15) rem(0);
+        color: $color-orange-95;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: rem(1.5);
+            background-color: $color-dark-15;
+            margin: fluid(25, 15) rem(0) rem(0) rem(0);
+        }
+    }
+}

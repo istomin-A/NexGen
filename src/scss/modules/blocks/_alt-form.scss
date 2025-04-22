@@ -1,0 +1,29 @@
+// * import index file
+@use '../tools' as *;
+// ==============================================================
+
+.alt-form {
+    display: flex;
+    align-items: center;
+    gap: fluid(20, 8);
+
+    &__input {
+        width: 100%;
+        padding: rem(16) rem(20);
+        font-size: fluid(18, 14);
+        color: $color-grey-40;
+        line-height: 1.5;
+        background-color: transparent;
+        border-bottom: rem(2) solid $color-dark-20;
+
+        @media (max-width: $laptop) {
+            padding: rem(14) rem(16);
+        }
+    }
+
+    &__button {
+        flex-shrink: 0;
+    }
+
+    &__icon {}
+}

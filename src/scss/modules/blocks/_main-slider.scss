@@ -1,0 +1,27 @@
+// * import index file
+@use '../tools' as *;
+// ==========================================================
+
+.main-slider {
+    padding: rem(0) rem(0) rem(30) rem(0) !important;
+
+    &__swiper {}
+
+    &__slide {
+        height: auto !important;
+    }
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-scrollbar {
+    background: $color-dark-25 !important;
+}
+
+.swiper-scrollbar-drag {
+    background: $color-dark-12 !important;
+}

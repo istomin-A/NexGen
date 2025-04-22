@@ -1,0 +1,57 @@
+// * import index file
+@use '../tools' as *;
+// ======================================================================
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(20, 12);
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        gap: rem(5);
+
+        &_last {
+            margin: rem(0) rem(0) fluid(30, 3) rem(0);
+        }
+    }
+
+    &__sub-title {
+        font-weight: 500;
+        font-size: rem(18);
+        color: $color-orange-90;
+
+        @media (max-width: $laptop) {
+            font-size: rem(16);
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding: fluid(20, 15);
+        border-radius: fluid(12, 8);
+        background-color: $color-dark-06;
+        font-size: rem(18);
+        color: $color-grey-40;
+
+        &_textarea {
+            resize: none;
+            min-height: fluid(170, 100);
+        }
+
+        @media (max-width: $laptop) {
+            font-size: rem(16);
+        }
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(20);
+
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

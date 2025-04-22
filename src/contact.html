@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title": "NexGen | Contact"
+})
+
+<body>
+    @@include('html/header.html',{
+        "page": 'contact'
+    })
+    <main class="main">
+        @@include('html/intro.html',{
+            "titleFirstPart": "Get in Touch",
+            "titleSecondPart": "with Us Today!",
+            "text": "At NexGen, we value your inquiries, feedback, and collaborations. Whether you are interested in our digital services, have questions about our projects, or want to explore potential partnerships, we encourage you to reach out to our dedicated team.",
+            "hideTicker": true,
+            "hideIntroMedia": false,
+            "imageIntro": "@img/intro/estatein.png",
+            "titleLinkImage": "Estatein Real Estate",
+            "subTitleLinkImage": "Web Development.",
+            "hideAdvantages": false
+        })
+        @@include('html/contact.html',{})
+        @@include('html/reviews.html',{})
+        @@include('html/questions.html',{})
+    </main>
+    @@include('html/footer.html',{})
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

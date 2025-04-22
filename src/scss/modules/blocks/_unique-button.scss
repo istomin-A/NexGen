@@ -1,0 +1,34 @@
+// * import index file
+@use '../tools' as *;
+// =================================================
+
+.unique-button {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(10);
+    font-size: fluid(24, 18);
+    text-transform: uppercase;
+    color: $color-orange-60;
+    background-color: transparent;
+    transition: color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $color-orange-70;
+        }
+    }
+
+    @media (any-hover: none) {
+        &:active {
+            color: $color-orange-70;
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+
+        @media (max-width: $laptop) {
+            @include square(rem(56));
+        }
+    }
+}

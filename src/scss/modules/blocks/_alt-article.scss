@@ -1,0 +1,102 @@
+// * import index file
+@use '../tools' as *;
+// ==========================================================
+
+.alt-article {
+    display: grid;
+    gap: rem(10);
+    padding: fluid(40, 20);
+    background-color: $color-dark-10;
+    border-radius: fluid(16, 12);
+
+    &_info {
+        grid-template-rows: 1fr auto;
+        height: 100%;
+        gap: fluid(30, 15);
+        padding: rem(0) rem(0) rem(0) rem(0);
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: fluid(28, 18);
+        color: $color-orange-95;
+
+        &_info {
+            font-size: fluid(24, 18);
+        }
+
+        a {
+            color: inherit;
+            transition: color 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $color-orange-80;
+                }
+            }
+
+            @media (any-hover: none) {
+                &:active {
+                    color: $color-orange-80;
+                }
+            }
+        }
+    }
+
+    &__text {
+
+        &:not(:last-child) {
+            margin: rem(0) rem(0) fluid(20, 6) rem(0);
+        }
+    }
+
+    &__inner {
+        justify-self: start;
+        display: inline-flex;
+        align-items: center;
+        gap: rem(10);
+        color: inherit;
+        transition: color 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-grey-50;
+            }
+        }
+
+        @media (any-hover: none) {
+            &:active {
+                color: $color-grey-50;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        padding: fluid(30, 15) fluid(40, 20);
+        background-color: $color-dark-12;
+        border-radius: 0 0 fluid(16, 12) fluid(16, 12);
+    }
+
+    &__body {
+        display: grid;
+        gap: rem(15);
+        padding: fluid(40, 20) fluid(40, 20) rem(0) fluid(40, 20);
+    }
+
+    &__photo {}
+
+    &__wrapper {}
+
+    &__name {
+        font-weight: 500;
+        font-size: fluid(20, 16);
+        color: $color-orange-90;
+    }
+
+    &__profession {
+        color: $color-grey-50;
+    }
+}

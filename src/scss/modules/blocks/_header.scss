@@ -1,0 +1,33 @@
+// * import index file
+@use '../tools' as *;
+// =======================================================================================================
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: rem(20) rem(0) fluid(20, 3) rem(0);
+    transition: padding 0.3s ease 0s;
+
+    &._scroll {
+        padding: rem(10) rem(0) rem(0) rem(0);
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(20);
+        padding: fluid(24, 20) fluid(37, 20);
+        background-color: $color-dark-10;
+        border-radius: fluid(16, 10);
+
+        &._scroll {
+            box-shadow: rem(3) rem(7) rem(29) rem(-8) $color-dark-35;
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+    }
+}

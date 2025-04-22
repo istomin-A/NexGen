@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title": "NexGen | Home"
+})
+
+<body>
+    @@include('html/header.html',{
+        "page": 'home'
+    })
+    <main class="main">
+        @@include('html/intro.html',{
+            "titleFirstPart": "Digital Solutions",
+            "titleSecondPart": "That Drive Success",
+            "text": "At NexGen, we believe in the transformative power of digital solutions. Our team of experts is dedicated to helping businesses like yours thrive in the fast-paced digital landscape.",
+            "hideTicker": true,
+            "hideIntroMedia": true,
+            "imageIntro": "@img/intro/estatein.png",
+            "titleLinkImage": "Estatein Real Estate",
+            "subTitleLinkImage": "Web Development.",
+            "hideAdvantages": true
+        })
+        @@include('html/advantages.html',{
+            "sectionTitle": "Reasons to Choose NexGen for Your Digital Journey",
+            "articleTitleOne": "Expertise in Cutting-Edge Technologies",
+            "articleTextOne": "NexGen ensures your projects are powered by state-of-the-art technologies, guaranteeing innovation and future-proof solutions.",
+            "articleTitleTwo": "Proven Track Record of Success",
+            "articleTextTwo": "NexGen demonstrates a consistent ability to meet and exceed client expectations, providing reliable and effective web solutions tailored to diverse needs.",
+            "articleTitleThree": "Client-Centric Approach",
+            "articleTextThree": "At NexGen, we prioritize understanding our clients' unique requirements, fostering transparent communication throughout the development process.",
+            "articleTitleFour": "Dedicated Team of Professionals",
+            "articleTextFour": "Our professionals bring a wealth of expertise to the table, ensuring the delivery of top-notch, scalable, and secure web solutions for your business.",
+            "isArticleTitleLink": true,
+            "hideButton": true
+        })
+        @@include('html/services.html',{
+            "servicesAlt": false,
+            "hideLinkAllServices": true
+        })
+        @@include('html/works.html',{
+            "sectionTitle": "Our Works"
+        })
+        @@include('html/reviews.html',{})
+        @@include('html/questions.html',{})
+    </main>
+    @@include('html/footer.html',{})
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

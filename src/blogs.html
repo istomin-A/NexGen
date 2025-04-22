@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title": "NexGen | Blogs"
+})
+
+<body>
+    @@include('html/header.html',{
+        "page": 'blogs'
+    })
+    <main class="main">
+        @@include('html/intro.html',{
+            "titleFirstPart": "We share experiences",
+            "titleSecondPart": "ideas and inspiration",
+            "text": "New ideas, cutting-edge approaches, and a fresh look at digital. Discover the future with Nexgen — we share the knowledge that shapes the next round of digital evolution. From web design and UX trends to branding strategies and mobile optimization — in our blogs you will find expert opinions, practical cases, and inspiration for growth. Read, research, implement — together we create a new generation of digital environment.",
+            "hideTicker": true,
+            "hideIntroMedia": false,
+            "imageIntro": "@img/intro/estatein.png",
+            "titleLinkImage": "Estatein Real Estate",
+            "subTitleLinkImage": "Web Development.",
+            "hideAdvantages": false
+        })
+        @@include('html/blogs.html',{})
+        @@include('html/reviews.html',{})
+        @@include('html/questions.html',{})
+    </main>
+    @@include('html/footer.html',{})
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title": "NexGen | About"
+})
+
+<body>
+    @@include('html/header.html',{
+        "page": 'about'
+    })
+    <main class="main">
+        @@include('html/intro.html',{
+            "titleFirstPart": "Elevating Brands",
+            "titleSecondPart": "in the Digital Age",
+            "text": "At NexGen, we believe in the transformative power of digital solutions. Our team of experts is dedicated to helping businesses like yours thrive in the fast-paced digital landscape.",
+            "hideTicker": true,
+            "hideIntroMedia": false,
+            "imageIntro": "@img/intro/estatein.png",
+            "titleLinkImage": "Estatein Real Estate",
+            "subTitleLinkImage": "Web Development.",
+            "hideAdvantages": false
+        })
+        @@include('html/team.html',{})
+        @@include('html/achievements.html',{})
+        @@include('html/advantages.html',{
+            "sectionTitle": "Awards & Recognitions",
+            "articleTitleOne": "Digital Excellence Award",
+            "articleTextOne": "Recognition for outstanding contributions to the digital industry, celebrating our ability to deliver exceptional web design and development solutions that push.",
+            "articleTitleTwo": "Top Mobile App Development Agency",
+            "articleTextTwo": "Recognized as a top mobile app development agency by industry experts, highlighting our proficiency in delivering seamless and user-centric mobile applications.",
+            "articleTitleThree": "Best Digital Marketing Campaign",
+            "articleTextThree": "Awarded for an exceptional digital marketing campaign with outstanding results, showcasing our data-driven strategies and targeted marketing efforts that achieved remarkable.",
+            "articleTitleFour": "Innovative Tech Startup Award",
+            "articleTextFour": "Recognition of our pioneering efforts as a technology startup, acknowledging our commitment to exploring and implementing cutting-edge technologies to drive.",
+            "isArticleTitleLink": true,
+            "hideButton": true
+        })
+        @@include('html/reviews.html',{})
+        @@include('html/questions.html',{})
+    </main>
+    @@include('html/footer.html',{})
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

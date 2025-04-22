@@ -1,0 +1,30 @@
+// * import index file
+@use '../tools' as *;
+// =============================================
+
+.success {
+    padding: fluid(40, 20) rem(0);
+
+    &__body {
+        display: grid;
+        gap: rem(20);
+
+        @media (max-width: $laptop) {
+            gap: rem(10);
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 0.7fr 1fr;
+        gap: rem(20);
+
+        @media (max-width: $laptop) {
+            gap: rem(10);
+        }
+
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

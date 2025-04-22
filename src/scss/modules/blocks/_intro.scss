@@ -1,0 +1,269 @@
+// * import index file
+@use '../tools' as *;
+// =================================================
+
+.intro {
+    padding: fluid(40, 20) rem(0);
+
+    &__main {
+        &:not(:last-child) {
+            margin: rem(0) auto rem(15) auto;
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: prc(1090, 1600) 1fr;
+        gap: fluid(20, 10);
+
+        @media (max-width: $tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__info {
+        display: grid;
+        gap: rem(15);
+        padding: fluid(60, 20) rem(20) rem(20) rem(20);
+        background-color: $color-dark-10;
+        border-radius: fluid(20, 12);
+    }
+
+    &__ticker {
+        align-self: end;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: rem(5) rem(12);
+        padding: rem(0) rem(0) rem(0) fluid(40, 3);
+
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: fluid(68, 28);
+        color: $color-orange-95;
+    }
+
+    &__button {
+        justify-self: start;
+    }
+
+    &__title-hidden-part {
+        @media (min-width: $mobile) {
+            @include visually-hidden;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: fluid(68, 28);
+        color: $color-orange-95;
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__text {
+        padding: rem(0) rem(0) rem(0) fluid(40, 3);
+    }
+
+    &__media {
+        display: grid;
+        position: relative;
+        border-radius: fluid(20, 12);
+
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: 0 0 rem(8) $color-dark-15;
+            }
+        }
+
+        @media (any-hover: none) {
+            &:active {
+                box-shadow: 0 0 rem(8) $color-dark-15;
+            }
+        }
+
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    &__stat{
+        padding: fluid(20, 10);
+        background-color: $color-dark-10;
+        border-radius: fluid(14, 12);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(20);
+
+        @media (max-width: $laptop) {
+            gap: rem(10);
+        }
+    }
+
+    &__box {
+        display: grid;
+        gap: rem(4);
+        padding: fluid(30, 15);
+        background-color: $color-dark-10;
+        border-radius: 0 0 fluid(20, 12) fluid(20, 12);
+    }
+
+    &__img {
+        border-radius: fluid(20, 12) fluid(20, 12) 0 0;
+        height: 100%;
+    }
+
+    &__link-title {
+        display: inline-block;
+        justify-self: start;
+        font-weight: 500;
+        font-size: fluid(24, 18);
+        color: $color-orange-95;
+        text-transform: uppercase;
+        transition: color 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-orange-80;
+            }
+        }
+
+        @media (any-hover: none) {
+            &:active {
+                color: $color-orange-80;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+    }
+
+    &__description {
+        justify-self: start;
+        display: inline-block;
+        position: relative;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: rem(12);
+
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__item {
+        display: grid;
+        justify-items: center;
+        text-align: center;
+        gap: rem(10);
+        background-color: $color-dark-10;
+        border-radius: rem(12);
+        padding: fluid(30, 16) fluid(20, 14);
+
+        &_more {
+            position: relative;
+            transition: box-shadow 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    box-shadow: 0 0 rem(8) $color-dark-15;
+                }
+            }
+
+            @media (any-hover: none) {
+                &:active {
+                    box-shadow: 0 0 rem(8) $color-dark-15;
+                }
+            }
+        }
+
+        &_stat{
+            background-color: $color-dark-12;
+            padding: fluid(20, 16) fluid(16, 14);
+        }
+    }
+
+    &__inner-statistics{
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        font-family: $font-accent;
+        font-weight: 500;
+        font-size: fluid(20, 16);
+        color: inherit;
+        transition: color 0.3s ease 0s;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-grey-50;
+            }
+        }
+        @media (any-hover: none) {
+            &:active {
+                color: $color-grey-50;
+            }
+        }
+
+        @media (max-width: $laptop) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__title-statistics {
+        display: inline-block;
+        font-family: $font-accent;
+        text-transform: uppercase;
+
+        &_more {
+            font-size: fluid(20, 14);
+            color: inherit;
+            transition: color 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $color-dark-20;
+                }
+            }
+
+            @media (any-hover: none) {
+                &:active {
+                    color: $color-dark-20;
+                }
+            }
+        }
+    }
+
+    &__statistics {
+        display: inline-block;
+        font-weight: 600;
+        font-size: rem(56);
+        color: $color-orange-70;
+
+        @media (max-width: $laptop) {
+            font-size: rem(36);
+        }
+    }
+}

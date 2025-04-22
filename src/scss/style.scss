@@ -1,0 +1,61 @@
+// * Обнуление
+@use 'modules/reset';
+
+// * Подключение шрифтов
+@use 'modules/fonts';
+
+// * Настройки сайта
+@use 'modules/options';
+
+// * Базовые стили для modal`s, tab`s, checkbox`s...
+@use 'modules/base';
+
+// =======================================================================================================
+// Подключение БЕМ блоков
+@use 'modules/blocks/logo';
+
+@use 'modules/blocks/border';
+
+@use 'modules/blocks/back-color';
+
+@use 'modules/blocks/ticker';
+
+@use 'modules/blocks/social';
+
+@use 'modules/blocks/spoller-question';
+
+@use 'modules/blocks/works-tabs';
+
+@use 'modules/blocks/button';
+@use 'modules/blocks/alt-button';
+@use 'modules/blocks/unique-button';
+
+@use 'modules/blocks/main-form';
+@use 'modules/blocks/alt-form';
+
+@use 'modules/blocks/alt-article';
+@use 'modules/blocks/services-article';
+@use 'modules/blocks/achievements-article';
+@use 'modules/blocks/team-article';
+@use 'modules/blocks/blogs-article';
+
+@use 'modules/blocks/section-header';
+
+@use 'modules/blocks/main-slider';
+
+@use 'modules/blocks/menu';
+@use 'modules/blocks/burger';
+@use 'modules/blocks/header';
+
+@use 'modules/blocks/intro';
+@use 'modules/blocks/advantages';
+@use 'modules/blocks/services';
+@use 'modules/blocks/works';
+@use 'modules/blocks/reviews';
+@use 'modules/blocks/questions';
+@use 'modules/blocks/success';
+@use 'modules/blocks/team';
+@use 'modules/blocks/achievements';
+@use 'modules/blocks/join';
+@use 'modules/blocks/contact';
+@use 'modules/blocks/footer';

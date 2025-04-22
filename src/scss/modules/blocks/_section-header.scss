@@ -1,0 +1,54 @@
+// * import index file
+@use '../tools' as *;
+// =============================================================
+
+.section-header {
+    padding: fluid(40, 20);
+    background-color: $color-dark-10;
+    border-radius: fluid(16, 12);
+    margin: rem(0) rem(0) rem(20) rem(0);
+
+    &_link {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(10);
+    }
+
+    &__title {
+        font-weight: 600;
+        color: $color-orange-95;
+        font-size: fluid(40, 22);
+        text-transform: uppercase;
+    }
+
+    &__inner {
+        flex-shrink: 0;
+        font-family: $font-accent;
+        display: inline-flex;
+        align-items: center;
+        gap: rem(10);
+        font-size: fluid(20, 16);
+        color: inherit;
+        text-transform: uppercase;
+        transition: color 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $color-grey-50;
+            }
+        }
+
+        @media (any-hover: none) {
+            &:active {
+                color: $color-grey-50;
+            }
+        }
+    }
+
+    &__mobile-none {
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+}

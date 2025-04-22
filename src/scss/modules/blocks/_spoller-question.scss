@@ -1,0 +1,61 @@
+// * import index file
+@use '../tools' as *;
+// ======================================================================
+
+.spoller-question {
+
+    &__button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(15);
+        padding: fluid(35, 15);
+        background-color: $color-dark-10;
+        border-radius: fluid(16, 12);
+        transition: border-radius 0.3s ease 0s;
+
+        &._active {
+            border-bottom: rem(1.5) solid $color-dark-15;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    &__button-text {
+        display: block;
+        font-weight: 500;
+        font-size: fluid(22, 18);
+        color: $color-orange-95;
+    }
+
+    & .back-color {
+        flex-shrink: 0;
+    }
+
+    & .back-color._active .spoller-question__minus_rotate {
+        transform: rotate(180deg);
+    }
+
+    &__minus {
+        @include abs-center;
+
+        display: inline-block;
+        width: rem(16);
+        height: rem(2);
+        background-color: $color-orange-80;
+
+        &_rotate {
+            transform: rotate(90deg);
+            transition: transform 0.3s ease 0s;
+        }
+    }
+
+    &__body {}
+
+    &__inner {
+        padding: fluid(30, 15) fluid(40, 20);
+        background-color: $color-dark-10;
+        border-radius: 0 0 fluid(16, 12) fluid(16, 12);
+    }
+}
