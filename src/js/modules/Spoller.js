@@ -53,6 +53,7 @@ class Spoller {
         } else {
             // Анимация закрытия споллера
             this.spollerBody.style.maxHeight = this.spollerBody.scrollHeight + 'px'
+            this.spollerBody.offsetHeight
             requestAnimationFrame(() => this.spollerBody.style.maxHeight = '0px')
             setTimeout(() => {
                 this.spollerBody.removeAttribute('style')
